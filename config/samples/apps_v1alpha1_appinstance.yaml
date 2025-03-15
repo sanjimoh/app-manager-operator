@@ -1,0 +1,9 @@
+apiVersion: apps.sanjitmohanty.in/v1alpha1
+kind: AppInstance
+metadata:
+  labels:
+    app.kubernetes.io/name: app-manager-operator
+    app.kubernetes.io/managed-by: kustomize
+  name: appinstance-sample
+spec:
+  # TODO(user): Add fields here

@@ -1,0 +1,8 @@
+apiVersion: apps.sanjitmohanty.in/v1alpha1
+kind: AppInstance
+metadata:
+  name: test-app
+spec:
+  size: 3
+  image: nginx:latest
+  environment: dev
