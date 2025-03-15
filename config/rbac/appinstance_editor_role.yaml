@@ -1,0 +1,27 @@
+# permissions for end users to edit appinstances.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  labels:
+    app.kubernetes.io/name: app-manager-operator
+    app.kubernetes.io/managed-by: kustomize
+  name: appinstance-editor-role
+rules:
+- apiGroups:
+  - apps.sanjitmohanty.in
+  resources:
+  - appinstances
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - apps.sanjitmohanty.in
+  resources:
+  - appinstances/status
+  verbs:
+  - get
